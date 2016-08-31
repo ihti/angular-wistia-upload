@@ -1,0 +1,15 @@
+
+<div ng-if="embed == null">
+    <label class="btn btn-primary btn-file">
+        Browse <input id="{{id}}" type="file" name="files[]" style="display: none;" multiple>
+    </label>
+
+    <div class="progress" ng-if="progress > 0">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+            {{progress}}%
+        </div>
+    </div>
+</div>
+
+
+<div ng-if="embed != null" ng-bind-html="embed"></div>
